@@ -17,12 +17,13 @@ echo "IAM token acquired."
 echo "Triggering Schematics APPLY on workspace $WORKSPACE_ID ..."
 
 curl -s -X POST \
-  "https://us-south.schematics.cloud.ibm.com/v2/workspaces/${WORKSPACE_ID}/actions" \
+  "https://us-south.schematics.cloud.ibm.com/v2/workspaces/${WORKSPACE_ID}/actions/apply" \
   -H "Authorization: Bearer $TOKEN" \
-  -H "refresh_token: $TOKEN" \
+  -H "refresh_token: $APIKEY" \
   -H "Content-Type: application/json" \
-  -d '{"action":"apply"}' \
+  -d '{}' \
   -o /tmp/apply_response.json
+
 
 echo "Schematics APPLY triggered. Response saved."
 
