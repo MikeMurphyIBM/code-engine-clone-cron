@@ -24,9 +24,8 @@ echo "DEBUG: Full API URL Attempted:"
 echo "https://private-us-south.schematics.cloud.ibm.com/v1/workspaces/${WORKSPACE_ID}/actions/apply"
 # --- END DEBUG STATEMENTS ---
 
-# Original curl command follows immediately after the echo statements
-curl -s -X POST \
-  "https://private-us-south.schematics.cloud.ibm.com/v1/workspaces/${WORKSPACE_ID}/actions/apply" \
+curl -s -X PUT \
+  "https://private-us-south.schematics.cloud.ibm.com/v1/workspaces/${WORKSPACE_ID}/apply" \
   -H "Authorization: Bearer $TOKEN" \
   -H "Content-Type: application/json" \
   -d '{}' \
