@@ -5,11 +5,11 @@ WORKSPACE_ID="us-south.workspace.clone-test.f1da6c21"
 
 APIKEY="$IBM_CLOUD_API_KEY"
 
-# Get IAM token
 TOKEN=$(curl -s -X POST \
   "https://iam.cloud.ibm.com/identity/token" \
   -H "Content-Type: application/x-www-form-urlencoded" \
   -d "grant_type=urn:ibm:params:oauth:grant-type:apikey&apikey=$APIKEY" \
+  -u bx:bx \
   | jq -r .access_token)
 
 echo "IAM token acquired."
