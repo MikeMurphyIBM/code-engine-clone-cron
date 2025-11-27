@@ -17,7 +17,7 @@ echo "IAM token acquired."
 echo "Triggering Schematics APPLY on workspace $WORKSPACE_ID ..."
 
 # --- START DEBUG STATEMENTS ---
-echo "DEBUG: Schematics Private Endpoint Confirmed."
+echo "DEBUG: Schematics Private Endpoint Confirme."
 echo "DEBUG: Workspace ID value (in brackets): [${WORKSPACE_ID}]"
 echo "DEBUG: WORKSPACE_ID character length: $(echo -n "${WORKSPACE_ID}" | wc -c)"
 echo "DEBUG: Full API URL Attempted:"
