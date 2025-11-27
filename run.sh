@@ -3,7 +3,7 @@ set -e
 
 WORKSPACE_ID="us-south.workspace.clone-test.f1da6c21"
 
-APIKEY="$IBM_CLOUD_API_KEY"
+APIKEY="$apikey"
 
 TOKEN=$(curl -s -X POST \
   "https://iam.cloud.ibm.com/identity/token" \
