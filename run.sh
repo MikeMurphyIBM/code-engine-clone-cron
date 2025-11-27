@@ -17,7 +17,7 @@ echo "IAM token acquired."
 echo "Triggering Schematics APPLY on workspace $WORKSPACE_ID ..."
 
 curl -s -X POST \
-  "https://us-south.schematics.cloud.ibm.com/v1/workspaces/${WORKSPACE_ID}/actions/apply" \
+  "https://private-us-south.schematics.cloud.ibm.com/v1/workspaces/${WORKSPACE_ID}/actions/apply" \
   -H "Authorization: Bearer $TOKEN" \
   -H "Content-Type: application/json" \
   -d '{}' \
